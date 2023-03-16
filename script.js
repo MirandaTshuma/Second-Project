@@ -1,4 +1,4 @@
-
+ console.log("Hello World");
 const question = [
     {
         question: "In which movie do the Avengers break up?",
@@ -79,8 +79,10 @@ const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("ans-btn");
 const nextButton = document.getElementById("next");
 
-let currentQuestionIndex = 0;
-letScore = 0
+let shuffledQuestions, currentQuestionIndex;
+
+let curentQuestionIndex = 0;
+let score = 0;
 
 function startQuiz(){
     currentQuestionIndex = 0;
@@ -88,12 +90,70 @@ function startQuiz(){
     nextButton.innerHTML = "Next";
     showQuestion();
 }
-function showQuestion(){;
-let currentQuestion = question[currentQuestionIndex];
-let questionNo = currentQuestionIndex + 1;
-questionElement.innerHTML - questionNo + "." + currentQuestion.question;
+
+function showQuestion(){
+    resetState();
+    let currentQuestion = question[currentQuestionIndex];
+    let questionNo = curentQuestionIndex;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
 }
-  
+function resetState(){
+    nextButton.style.display = ("none");
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+
+    }
+
+}
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    constisCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classlist.ass(correct);
+        score++;
+    }else{
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerButtons.chldren).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disables = true;
+    })
+    nextButton.style.display= "block";
+}
+function showScore(){
+    resetState();
+    questionElement.innerHTML = 'You scored ${score} out of ${questions.length}!';
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+}
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(curentQuestionIndex < shuffledQuestions.length){
+        showQuestion();
+     }else{
+        showScore();
+     }
+}
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < shuffledQuestions.length){
+        handleNextButton();
+   }else{
+    startQuiz();
+   }
+})
 
 
 

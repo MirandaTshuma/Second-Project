@@ -42,4 +42,10 @@ body {
     display: none;
 }
 
+.correct {
+    background: green;
+}
 
+.incorrect {
+    background: red;
+}
