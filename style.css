@@ -2,15 +2,17 @@ body {
     background-color: #f8ead8;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
-     justify-content: center;
-     text-align: center;
-}
-.logo {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .logo {
     width: 25%;
     display: block;
     margin: 0px auto; 
-}
-.container {
+  }
+  
+  .container {
     background-color: #ffc3a1;
     width: 80%;
     max-width: 550px;
@@ -18,10 +20,12 @@ body {
     margin: 50px auto 0;
     padding: 5px;
     padding-bottom: 40px;
-   
-}
-
-.btn {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  
+  .btn {
     width: 80%;
     border: 1px solid #f8ead8;
     background-color: #f8ead8;
@@ -29,16 +33,110 @@ body {
     text-align: left;
     padding: 10px;
     border-radius: 10px;
-    transition:0.25s
-}
-.btn:hover {
+    transition: 0.25s;
+  }
+  
+  .btn:hover {
     color: #d8c4b9;
-}
-.next {
+  }
+  
+  .next {
     cursor: pointer;
     width: 100px;
     background-color: pink;
     border-radius: 4px;
     display: none;
-}
-
+  }
+  
+  #try-again-btn {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 12px 24px; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 10px;
+    margin-top: 20px; 
+  }
+  
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fbddcb;
+    color: grey;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .quiz-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .quiz-page h2 {
+    margin-top: 0;
+  }
+  
+  .quiz-page p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .start-page {
+    background-color: #f8ead8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+    display: block;
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      }
+  
+  .start-page h2 {
+    margin-top: 0;
+  }
+  
+  .start-page p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  #intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #intro button {
+    font-size: 2rem;
+    padding: 15px 30px;
+    background-color: pink;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #intro button:hover {
+    transform: scale(1.1);
+    background-color: #f582ae;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  }
+  

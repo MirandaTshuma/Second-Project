@@ -16,7 +16,12 @@ The most complex function has a cyclomatic complexity value of 2 while the media
 
     Finally, the JavaScript code defines an array of questions and their possible answers. It dynamically loads the questions and answer options and handles the selection of the correct answer and displaying the user's score at the end of the quiz.
 
-##Development of the project -the project started with laying out the HTML and CSS code and making sure that it is corresponding and all the lengths width measurements suit the desired look. After that the JS code was added starting with th questions which are to be featured in the quiz as well as its answers. These were the steps taken in the  making of this website.
+##Development of the project -The HTML code includes two main sections: an introduction section and the quiz section. The introduction section contains a heading, a short paragraph, and a button to start the quiz. The quiz section is hidden by default and becomes visible when the user clicks on the start button. The quiz section includes a logo, a question section, a set of answer buttons, and a next button. At the end of the quiz, a "Try Again" button and a score section are displayed. The code also includes a footer with a copyright notice.
+
+The CSS code provides styling for the HTML elements used in the movie trivia quiz. It includes styling for the background color, font family, alignment, positioning, and padding of various elements, such as the quiz container, answer buttons, and footer.
+
+The JavaScript code includes an array of questions with their corresponding answers and a variable to track the current question. The code also includes functions to start the quiz, display the current question and answer choices, check the user's answer, move to the next question, and display the score at the end of the quiz. The JavaScript code also includes an event listener for the start button to initiate the quiz and display the first question.. These were the steps taken in the  making of this website.
+
     Planning out the quiz: Once l had determined the number of questions, the types of questions, and the possible answers for each question. it made it easy to decide on the scoring system and what happens when a user finishes the quiz.
 
     After creating the HTML and CSS: setting up the basic structure of the quiz using HTML and applying styling using CSS and creating  a container to hold the quiz questions and answer options.
@@ -55,4 +60,11 @@ Click Save. Your live Github Pages site is now deployed at the URL shown.
 The project relied heavily on https://eloquentjavascript.net/ as well as YouTube tutorial by Brian Design titled How to Make a Quiz using HTML, CSS and Javascript. 
 
 9. Unsolved bugs
--my Javascript could not launch and connect with the Css and HTML. I tried starting another project from scrtch and that did not work l went ahead and crosschecked if Js is connected to the HTML file and it is as per screenshot. Attempts to check if HTML nad Javacript were connected were not futile. 
+totalseems to load beneath while the quiz is ongoing. l tried endQuiz() function that will display the final score and hide the answer buttons and next buttonc but the code was  not reading.
+Between the start again and the Start quiz prompts there is a quiz questioon that pops up and l tried looking for ways on Stackflow on how to solve this bug but did not succeed. 
+10. This project used the below sources for more information.;
+-l signed up and paid for a taught bootcamp that assisted me with the complilation of this project. 
+-also used the following Youtube channels for reference and assistance in the creation of the site "Build a Quiz App with HTML CSS AND Javascript - By James Q Quick FloridaJS"
+    -"How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial by Brian Design"
+    -"Create a Quiz App with Timer using HTML CSS & JavaScript | Quiz Web App using JavaScript CodingNepal"
+
